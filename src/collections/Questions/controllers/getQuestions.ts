@@ -1,5 +1,4 @@
 import {Question} from "../models/Question";
-import {Model} from "mongoose";
 import {IQuestion} from "../models/IQuestion";
 
 export const getQuestions: () => Promise<IQuestion[] | undefined> = async function () {
