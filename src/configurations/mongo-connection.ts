@@ -1,7 +1,8 @@
 import Mongoose from "mongoose";
+
 let database: Mongoose.Connection;
 
-export const connect = async (uri: string) => {
+export const connect: (uri: string) => void = async function (uri: string) {
     try {
         if (database) {
             return;

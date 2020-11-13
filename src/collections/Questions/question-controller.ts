@@ -1,5 +1,5 @@
-import {Question} from "../models/Question";
-import {IQuestion} from "../models/IQuestion";
+import {Question} from "./models/Question";
+import {IQuestion} from "./models/IQuestion";
 
 export const getQuestions: () => Promise<IQuestion[] | undefined> = async () => {
     try {
@@ -25,5 +25,13 @@ export const deleteQuestion: (id: string) => Promise<IQuestion | null | undefine
         return response;
     } catch (error: any) {
         console.log(`error occurred in deleteQuestion() error: ${error}`);
+    }
+}
+export const putQuestion: (id: string, question: IQuestion) => Promise<IQuestion | null | undefined> = async (id, question) => {
+    try {
+        const response: IQuestion | null | undefined = await Question.findByIdAndUpdate(id, question);
+        return response;
+    } catch (error: any) {
+        console.log(`error occurred in putQuestion() error: ${error}`);
     }
 }

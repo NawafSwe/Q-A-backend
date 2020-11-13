@@ -1,7 +1,7 @@
 import express = require('express');
 import {Request, Response} from "express";
-import {getQuestions, postQuestion, deleteQuestion} from "../controllers/questionController";
-import {IQuestion} from "../models/IQuestion";
+import {getQuestions, postQuestion, deleteQuestion} from "./question-controller";
+import {IQuestion} from "./models/IQuestion";
 
 export const questionRoute: express.Router = express.Router();
 questionRoute.get('/', async (req: Request, res: Response) => {
