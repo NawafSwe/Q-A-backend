@@ -1,5 +1,5 @@
 import {Model, model, Schema} from "mongoose";
-import {IQuestion} from "./IQuestion";
+import {QuestionInterface} from "./question-interface";
 
 const questionSchema: Schema = new Schema({
     courseId: {type: String, required: true},
@@ -8,4 +8,4 @@ const questionSchema: Schema = new Schema({
     type: {type: String, required: true},
     status: {type: String, default: 'not Completed'},
 });
-export const Question: Model<IQuestion> = model<IQuestion>('Question', questionSchema);
+export const QuestionModel: Model<QuestionInterface> = model<QuestionInterface>('QuestionModel', questionSchema);
