@@ -1,7 +1,11 @@
-// importing packages
+/* ------------ importing & requiring Packages ------------ */
 import express = require('express');
 import {Request, Response} from "express";
 import bodyParser = require('body-parser');
+import cors = require('cors');
+import helmet = require('helmet');
+import {MONGO_URI} from "./configurations/config";
+import {connect} from "./configurations/mongoConnection";
 
 /* ------------ Choosing Env ------------ */
 if (process.env.NODE === 'production') {
@@ -9,21 +13,23 @@ if (process.env.NODE === 'production') {
 } else {
     require('dotenv').config();
 }
-//establish database connection
-import {MONGO_URI} from "./configurations/config";
-import {connect} from "./configurations/mongoConnection";
-
+/* ------------ Connecting to db ------------ */
 connect(MONGO_URI);
 
-
-// Create a new express app instance
+/* ------------ App Config ------------ */
 const app: express.Application = express();
-//config app
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(cors());
+app.use(helmet());
+
+/* ------------ Testing Backend ------------ */
+
+
 app.get('/', async (req: Request, res: Response) => {
-    res.send('hi world');
+    res.send('hi world').status(200);
 });
-//establish connection
+
+/* ------------ Establish Server Connection ------------ */
 import {PORT, HOST} from "./configurations/config";
 
 app.listen(PORT);
