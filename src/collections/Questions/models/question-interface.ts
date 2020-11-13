@@ -1,5 +1,5 @@
 import {Document} from "mongoose";
-export interface IQuestion extends Document {
+export interface QuestionInterface extends Document {
     courseId: string;
     question: string;
     answer: string;
