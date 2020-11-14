@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;configurations/config&quot; | notebook-server</title>
+	<title>&quot;utils/validate-query&quot; | notebook-server</title>
 	<meta name="description" content="Documentation for notebook-server">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_configurations_config_.html">&quot;configurations/config&quot;</a>
+					<a href="_utils_validate_query_.html">&quot;utils/validate-query&quot;</a>
 				</li>
 			</ul>
-			<h1>Module &quot;configurations/config&quot;</h1>
+			<h1>Module &quot;utils/validate-query&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -71,47 +71,72 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Variables</h3>
+							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_configurations_config_.html#host" class="tsd-kind-icon">HOST</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_configurations_config_.html#mongo_uri" class="tsd-kind-icon">MONGO_<wbr>URI</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_configurations_config_.html#port" class="tsd-kind-icon">PORT</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_utils_validate_query_.html#validatequery" class="tsd-kind-icon">validate<wbr>Query</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="host" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> HOST</h3>
-					<div class="tsd-signature tsd-kind-icon">HOST<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = String(process.env.HOST) || &#x27;localhost&#x27;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/NawafSwe/NoteBook-server/blob/ebaf34b/src/configurations/config.ts#L2">src/configurations/config.ts:2</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="mongo_uri" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> MONGO_<wbr>URI</h3>
-					<div class="tsd-signature tsd-kind-icon">MONGO_<wbr>URI<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = String(process.env.MONGO_URI)</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/NawafSwe/NoteBook-server/blob/ebaf34b/src/configurations/config.ts#L3">src/configurations/config.ts:3</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="port" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> PORT</h3>
-					<div class="tsd-signature tsd-kind-icon">PORT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = Number(process.env.PORT) || 6060</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/NawafSwe/NoteBook-server/blob/ebaf34b/src/configurations/config.ts#L1">src/configurations/config.ts:1</a></li>
-						</ul>
-					</aside>
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="validatequery" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> validate<wbr>Query</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">validate<wbr>Query<span class="tsd-signature-symbol">(</span>queries<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/NawafSwe/NoteBook-server/blob/ebaf34b/src/utils/validate-query.ts#L18">src/utils/validate-query.ts:18</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>author</dt>
+									<dd><p>Nawaf Alsharqi</p>
+									</dd>
+									<dt>export</dt>
+									<dd></dd>
+									<dt>function</dt>
+									<dd></dd>
+									<dt>name</dt>
+									<dd><p>validateQuery.</p>
+									</dd>
+									<dt>throws</dt>
+									<dd><p>{Error} if there is an error.</p>
+									</dd>
+									<dt>description</dt>
+									<dd><p>validates the query of a request url</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>queries: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>list hold all the schema of a particular request.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>request: <span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ParsedQs</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>request Object that holds the request query.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">true</span></h4>
+							<p>if there is no error.</p>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -151,7 +176,7 @@
 					<li class=" tsd-kind-module">
 						<a href="_collections_questions_question_validator_.html">&quot;collections/questions/question-<wbr>validator&quot;</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="_configurations_config_.html">&quot;configurations/config&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -160,7 +185,7 @@
 					<li class=" tsd-kind-module">
 						<a href="_index_.html">&quot;index&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="_utils_validate_query_.html">&quot;utils/validate-<wbr>query&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -170,14 +195,8 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="_configurations_config_.html#host" class="tsd-kind-icon">HOST</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="_configurations_config_.html#mongo_uri" class="tsd-kind-icon">MONGO_<wbr>URI</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="_configurations_config_.html#port" class="tsd-kind-icon">PORT</a>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_utils_validate_query_.html#validatequery" class="tsd-kind-icon">validate<wbr>Query</a>
 					</li>
 				</ul>
 			</nav>

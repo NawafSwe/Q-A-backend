@@ -35,7 +35,7 @@ app.get('/', async (req: Request, res: Response) => {
 });
 /* ------------ importing Routes ------------ */
 import {questionRoute} from './collections/questions/question-route';
-
 app.use('/questions', questionRoute);
+
 app.listen(PORT);
 console.log(`server running on  http://${HOST}:${PORT}`);
