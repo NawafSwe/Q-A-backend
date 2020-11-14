@@ -7,4 +7,4 @@ const notebookSchema = new Schema({
     type: {type: String, required: true}
 
 });
-export const Notebook: Model<NotebookInterface> = model('Notebook', notebookSchema);
+export const Notebook: Model<NotebookInterface> = model<NotebookInterface>('Notebook', notebookSchema);

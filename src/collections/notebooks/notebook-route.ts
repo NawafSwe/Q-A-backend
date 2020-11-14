@@ -1,6 +1,6 @@
 import express = require('express');
 
-const notebookRoute: express.Router = express.Router();
+export const notebookRoute: express.Router = express.Router();
 import {NotebookInterface} from './models/notebook-interface'
 import {Request, Response} from "express";
 import {getNotebooks, putNotebookById, postNotebook, deleteNotebookById, getNotebookById} from './notebook-controller';

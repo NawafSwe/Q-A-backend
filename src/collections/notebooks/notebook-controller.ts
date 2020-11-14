@@ -1,8 +1,5 @@
-import {Model} from "mongoose";
 import {NotebookInterface} from "./models/notebook-interface";
-
-
-const Notebook: Model<NotebookInterface> = require('./models/notebook-model');
+import {Notebook} from './models/notebook-model';
 
 export const getNotebooks: () => Promise<NotebookInterface[] | undefined | null> | never = async () => {
     try {
