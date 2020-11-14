@@ -27,23 +27,23 @@ questionRoute.get('/', validate('getQuestions'), async (req: Request, res: Respo
     if (!err.isEmpty()) {
         res.send(err.mapped()).status(400);
     } else {
-        const response: QuestionInterface[] | undefined = await getQuestions();
+        const response: QuestionInterface[] |  undefined | null | never = await getQuestions();
 
         res.send(response).status(200);
     }
 });
 
 questionRoute.post('/', async (req: Request, res: Response) => {
-    const response: QuestionInterface | undefined = await postQuestion(req.body);
+    const response: QuestionInterface |  undefined | null | never = await postQuestion(req.body);
     res.send(response).status(200);
 });
 
 questionRoute.delete('/:id', async (req: Request, res: Response) => {
-    const response: QuestionInterface | undefined | null = await deleteQuestion(req.params.id);
+    const response: QuestionInterface |  undefined | null | never | null = await deleteQuestion(req.params.id);
     res.send(response).status(200);
 });
 
 questionRoute.put('/:id', async (req: Request, res: Response) => {
-    const response: QuestionInterface | undefined | null = await putQuestion(req.params.id, req.body);
+    const response: QuestionInterface |  undefined | null | never | null = await putQuestion(req.params.id, req.body);
     res.send(response).status(200);
 });
