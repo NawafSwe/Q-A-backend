@@ -8,16 +8,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-// importing packages
-const express_1 = __importDefault(require("express"));
-// Create a new express app instance
-const app = express_1.default();
-app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    res.send('hi world');
-}));
-app.listen(3000);
-console.log('server running fine on port 3000');
+exports.getNotebooks = void 0;
+const Notebook = require('./models/notebook-model');
+exports.getNotebooks = () => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const response = yield Notebook.find({});
+        return response;
+    }
+    catch (error) {
+        console.log(`error occurred in getNotebooks() error: ${error} `);
+    }
+});

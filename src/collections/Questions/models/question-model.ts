@@ -8,4 +8,4 @@ const questionSchema: Schema = new Schema({
     type: {type: String, required: true},
     status: {type: String, default: 'not Completed'},
 });
-export const QuestionModel: Model<QuestionInterface> = model<QuestionInterface>('QuestionModel', questionSchema);
+export const QuestionModel: Model<QuestionInterface> = model<QuestionInterface>('Question', questionSchema);
