@@ -1,9 +1,9 @@
 import {NotebookInterface} from "./models/notebook-interface";
-import {Notebook} from './models/notebook-model';
+import {NotebookModel} from './models/notebook-model';
 
 export const getNotebooks: () => Promise<NotebookInterface[] | undefined | null> | never = async () => {
     try {
-        const response: NotebookInterface[] | undefined = await Notebook.find({});
+        const response: NotebookInterface[] | undefined = await NotebookModel.find({});
         return response;
     } catch (error: any) {
         console.log(`error occurred in getNotebooks() error: ${error} `)
@@ -11,7 +11,7 @@ export const getNotebooks: () => Promise<NotebookInterface[] | undefined | null>
 };
 export const postNotebook: (notebook: NotebookInterface) => Promise<NotebookInterface | undefined | null> | never = async (notebook) => {
     try {
-        const response: NotebookInterface | undefined = await Notebook.create(notebook);
+        const response: NotebookInterface | undefined = await NotebookModel.create(notebook);
         return response;
 
     } catch (error: any) {
@@ -20,7 +20,7 @@ export const postNotebook: (notebook: NotebookInterface) => Promise<NotebookInte
 };
 export const getNotebookById: (id: string) => Promise<NotebookInterface | undefined | null> | never = async (id) => {
     try {
-        const response: NotebookInterface | undefined | null = await Notebook.findById(id);
+        const response: NotebookInterface | undefined | null = await NotebookModel.findById(id);
         return response;
     } catch (error: any) {
         console.log(`error occurred in getNotebookById() error: ${error}`);
@@ -29,7 +29,7 @@ export const getNotebookById: (id: string) => Promise<NotebookInterface | undefi
 export const deleteNotebookById: (id: string) => Promise<NotebookInterface | undefined | null> | never = async (id) => {
 
     try {
-        const response: NotebookInterface | undefined | null = await Notebook.findByIdAndDelete(id);
+        const response: NotebookInterface | undefined | null = await NotebookModel.findByIdAndDelete(id);
         return response;
     } catch (error: any) {
         console.log(`error occurred in deleteNotebookById() error: ${error}`);
@@ -38,7 +38,7 @@ export const deleteNotebookById: (id: string) => Promise<NotebookInterface | und
 
 export const putNotebookById: (id: string, notebook: NotebookInterface) => Promise<NotebookInterface | undefined | null> | never = async (id, notebook) => {
     try {
-        const response: NotebookInterface | undefined | null = await Notebook.findByIdAndUpdate(id, notebook);
+        const response: NotebookInterface | undefined | null = await NotebookModel.findByIdAndUpdate(id, notebook);
         return response;
     } catch (error: any) {
         console.log(`error occurred in putNotebookById() error: ${error}`);

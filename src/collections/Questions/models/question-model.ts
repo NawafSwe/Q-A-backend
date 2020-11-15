@@ -1,4 +1,11 @@
 /**
+ * @module QuestionModel
+ * @requires {Schema,Model,model}
+ * @requires QuestionInterface
+ * @description this model builds the question collection model
+ */
+
+/**
  * @type {import {Model} from "mongoose"}
  * @namespace Model
  * @description mongoose Model to create a questionModel instance to operate CURD operations
