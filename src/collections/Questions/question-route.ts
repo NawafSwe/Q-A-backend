@@ -175,10 +175,9 @@ questionRoute.delete('/:id', validate('deleteQuestionById'), async (req: Request
     if (!err.isEmpty()) {
         res.send(err.mapped()).status(400);
     } else {
-        const response: QuestionInterface | undefined | null | never | null = await deleteQuestion(req.params.id);
+        const response: QuestionInterface | undefined | null | never = await deleteQuestion(req.params.id);
         res.send(response).status(200);
     }
-
 });
 
 /**
