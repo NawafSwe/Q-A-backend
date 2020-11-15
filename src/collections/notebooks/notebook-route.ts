@@ -49,7 +49,7 @@ notebookRoute.delete('/:id', validate('deleteNotebookById'), async (req: Request
     }
 });
 
-notebookRoute.put('/:id', validate('putNotebook'), async (req: Request, res: Response) => {
+notebookRoute.put('/:id', validate('putNotebookById'), async (req: Request, res: Response) => {
     const err: any = validationResult(req);
     if (!err.isEmpty()) {
         res.send(err.mapped()).status(400);

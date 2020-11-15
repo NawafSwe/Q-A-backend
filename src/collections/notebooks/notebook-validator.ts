@@ -85,7 +85,7 @@ export const validate: (method: string) => void = (method) => {
                 /* ------------------- End of ID Validation ------------------- */
             ];
         }
-        case 'putNotebookId': {
+        case 'putNotebookById': {
             return [
                 /* ------------------- Schema Validation ------------------- */
                 body(' ').custom((value, {req}) => {
