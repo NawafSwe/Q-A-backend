@@ -173,4 +173,3 @@ export const validate: (method: string) => void = (method) => {
 
     }
 }
-
