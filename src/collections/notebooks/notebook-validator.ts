@@ -32,10 +32,7 @@ export const validate: (method: string) => void = (method) => {
                 param('id', 'id must exists and be a valid mongoId').exists().isMongoId()
                 /* ------------------- End of ID Validation ------------------- */
             ];
-
-
         }
-
         case 'postNotebook': {
             return [
 
@@ -98,7 +95,7 @@ export const validate: (method: string) => void = (method) => {
                 /* ------------------- End Of Schema Validation ------------------- */
 
                 /* ------------------- ID Validation ------------------- */
-                param('id', 'id must exists and be a valid mongoId').exists().isMongoId(),
+                param('id', 'id must exists and be a valid mongoId').optional().isMongoId(),
                 /* ------------------- End of ID Validation ------------------- */
 
                 /* ------------------- courseId Validation ------------------- */
@@ -115,7 +112,7 @@ export const validate: (method: string) => void = (method) => {
                 /* ------------------- End of type Validation ------------------- */
 
                 /* ------------------- questionId Validation ------------------- */
-                body('questionsId', 'questionId id must be valid MongoId').optional().exists().isMongoId(),
+                body('questionsId', 'questionId id must be valid MongoId').optional().isMongoId(),
                 /* ------------------- End of questionId Validation ------------------- */
 
             ];

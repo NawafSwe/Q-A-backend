@@ -1,11 +1,9 @@
 import express = require('express');
-
 export const notebookRoute: express.Router = express.Router();
 import {NotebookInterface} from './models/notebook-interface'
 import {Request, Response} from "express";
 import {getNotebooks, putNotebookById, postNotebook, deleteNotebookById, getNotebookById} from './notebook-controller';
 import {validationResult} from "express-validator";
-
 const {validate} = require("./notebook-validator");
 
 notebookRoute.get('/', validate('getNotebooks'), async (req: Request, res: Response) => {
@@ -18,6 +16,7 @@ notebookRoute.get('/', validate('getNotebooks'), async (req: Request, res: Respo
     }
 
 });
+
 notebookRoute.post('/', validate('postNotebook'), async (req: Request, res: Response) => {
     const err: any = validationResult(req);
     if (!err.isEmpty()) {
@@ -27,7 +26,6 @@ notebookRoute.post('/', validate('postNotebook'), async (req: Request, res: Resp
         res.send(response).status(200);
     }
 });
-
 
 notebookRoute.get('/:id', validate('getNotebookById'), async (req: Request, res: Response) => {
     const err: any = validationResult(req);
