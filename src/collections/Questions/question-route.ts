@@ -46,12 +46,14 @@ import {QuestionInterface} from "./models/question-interface";
 //     return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
 // }
 /**
+ * @const
  * @type {function(method:string):VoidFunction}
  * @namespace validate
  * @description function used to validate each request before going to server and mess with database
  */
 const {validate} = require('./question-validator');
 /**
+ * @const
  * @type {function (req:Request): [[ValidationChain] }
  * @namespace validationResult
  * @description getting the validation result object from a request
@@ -60,30 +62,35 @@ const {validationResult} = require('express-validator');
 
 
 /**
+ * @const
  * @type {function(): QuestionInterface[] | undefined | null}
  * @namespace getQuestions
  * @description gets all questions from database
  */
 
 /**
+ * @const
  * @type {function(question:QuestionInterface): QuestionInterface | undefined | null}
  * @namespace postQuestion
  * @description post new question to database
  */
 
 /**
+ * @const
  * @type {function(id:string): QuestionInterface | undefined | null}
  * @namespace getQuestionById
  * @description get question from database by id
  */
 
 /**
+ * @const
  * @type {function(id:string): QuestionInterface | undefined | null}
  * @namespace deleteQuestion
  * @description deletes question from database by id
  */
 
 /**
+ * @const
  * @type {function(id:string,question:QuestionInterface): QuestionInterface | undefined | null}
  * @namespace putQuestion
  * @description updates question data from database by id
@@ -92,6 +99,7 @@ const {validationResult} = require('express-validator');
 const {getQuestions, postQuestion, deleteQuestion, putQuestion, getQuestionById} = require("./question-controller");
 
 /**
+ * @const
  * @type {express.Router}
  * @namespace questionRoute
  * @description question-router to route on all ends points of the collection questions.

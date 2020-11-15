@@ -100,7 +100,7 @@ export const deleteQuestion: (id: string) => Promise<QuestionInterface | null | 
  * @param {QuestionInterface} question
  * @returns  Promise<QuestionInterface | null | undefined> | never
  * @throws {Error} throws an error if there is an error during the process
- * @description update question data by id
+ * @description update question data by id from database
  */
 export const putQuestion: (id: string, question: QuestionInterface) => Promise<QuestionInterface | null | undefined> | never = async (id, question) => {
     try {
