@@ -10,6 +10,16 @@ export const getQuestions: () => Promise<QuestionInterface[] | undefined | null>
     }
 };
 
+export const getQuestionById: (id: string) => Promise<QuestionInterface | undefined | null> = async (id) => {
+    try {
+        const response: QuestionInterface | undefined | null = await QuestionModel.findById(id);
+        return response;
+    } catch (error: any) {
+        console.log(`error occurred in getQuestionById error: ${error}`)
+    }
+}
+
+
 export const postQuestion: (question: QuestionInterface) => Promise<QuestionInterface | undefined | null> | never = async (question) => {
     try {
         const response: QuestionInterface = await QuestionModel.create(question);
