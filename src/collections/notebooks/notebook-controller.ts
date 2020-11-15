@@ -1,9 +1,6 @@
 import {NotebookInterface} from "./models/notebook-interface";
 import {Notebook} from './models/notebook-model';
 
-const {validationResult} = require('express-validator');
-
-
 export const getNotebooks: () => Promise<NotebookInterface[] | undefined | null> | never = async () => {
     try {
         const response: NotebookInterface[] | undefined = await Notebook.find({});
