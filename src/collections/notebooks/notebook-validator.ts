@@ -1,5 +1,6 @@
 import {validateSchema} from "../../utils/validate-schema";
 import {body, param} from "express-validator";
+import ObjectId = require('mongoose');
 
 export const validate: (method: string) => void = (method) => {
     switch (method) {
@@ -60,7 +61,16 @@ export const validate: (method: string) => void = (method) => {
                 /* ------------------- End of type Validation ------------------- */
 
                 /* ------------------- questionId Validation ------------------- */
-                body('questionsId', 'questionId id must be valid MongoId').exists().isMongoId(),
+
+                body('questionsId').optional().custom((value, {req}) => {
+                    for (let question of value) {
+                        if (!ObjectId.isValidObjectId(question)) {
+                            throw new Error('question must be valid mongoID');
+                        }
+                    }
+                    return true;
+                }),
+             
                 /* ------------------- End of questionId Validation ------------------- */
 
             ];
@@ -112,7 +122,14 @@ export const validate: (method: string) => void = (method) => {
                 /* ------------------- End of type Validation ------------------- */
 
                 /* ------------------- questionId Validation ------------------- */
-                body('questionsId', 'questionId id must be valid MongoId').optional().isMongoId(),
+                body('questionsId').optional().custom((value, {req}) => {
+                    for (let question of value) {
+                        if (!ObjectId.isValidObjectId(question)) {
+                            throw new Error('question must be valid mongoID');
+                        }
+                    }
+                    return true;
+                }),
                 /* ------------------- End of questionId Validation ------------------- */
 
             ];
