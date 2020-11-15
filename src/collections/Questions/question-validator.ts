@@ -25,6 +25,7 @@ import {validateSchema} from '../../utils/validate-schema';
 
 /**
  * @author Nawaf Alsharqi
+ * @const
  * @function
  * @name validate
  * @param {string} method holds the name of the end point to check with it
