@@ -1,4 +1,12 @@
+/**
+ * @type {typeof {model,Model,Schema} }
+ */
 import {Model, model, Schema} from "mongoose";
+
+/**
+ * @type {typeof import("./question-interface"){QuestionInterface} }
+ */
+
 import {QuestionInterface} from "./question-interface";
 
 const questionSchema: Schema = new Schema({

@@ -70,7 +70,7 @@ export const validate: (method: string) => void = (method) => {
                     }
                     return true;
                 }),
-             
+
                 /* ------------------- End of questionId Validation ------------------- */
 
             ];

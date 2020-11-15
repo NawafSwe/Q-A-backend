@@ -70,36 +70,67 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Variables</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"><a href="_collections_notebooks_notebook_controller_.html#notebook" class="tsd-kind-icon">Notebook</a></li>
-							</ul>
-						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_collections_notebooks_notebook_controller_.html#deletenotebookbyid" class="tsd-kind-icon">delete<wbr>Notebook<wbr>ById</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_collections_notebooks_notebook_controller_.html#getnotebookbyid" class="tsd-kind-icon">get<wbr>Notebook<wbr>ById</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_collections_notebooks_notebook_controller_.html#getnotebooks" class="tsd-kind-icon">get<wbr>Notebooks</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_collections_notebooks_notebook_controller_.html#postnotebook" class="tsd-kind-icon">post<wbr>Notebook</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_collections_notebooks_notebook_controller_.html#putnotebookbyid" class="tsd-kind-icon">put<wbr>Notebook<wbr>ById</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
-					<a name="notebook" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> Notebook</h3>
-					<div class="tsd-signature tsd-kind-icon">Notebook<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Model</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = require(&#x27;./models/notebook-model&#x27;)</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/NawafSwe/NoteBook-server/blob/ebaf34b/src/collections/notebooks/notebook-controller.ts#L4">src/collections/notebooks/notebook-controller.ts:4</a></li>
-						</ul>
-					</aside>
-				</section>
-			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="deletenotebookbyid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> delete<wbr>Notebook<wbr>ById</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Notebook<wbr>ById<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/NawafSwe/NoteBook-server/blob/6762fc7/src/collections/notebooks/notebook-controller.ts#L29">src/collections/notebooks/notebook-controller.ts:29</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="getnotebookbyid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Notebook<wbr>ById</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Notebook<wbr>ById<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/NawafSwe/NoteBook-server/blob/6762fc7/src/collections/notebooks/notebook-controller.ts#L21">src/collections/notebooks/notebook-controller.ts:21</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="getnotebooks" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Notebooks</h3>
@@ -110,10 +141,59 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/NawafSwe/NoteBook-server/blob/ebaf34b/src/collections/notebooks/notebook-controller.ts#L6">src/collections/notebooks/notebook-controller.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/NawafSwe/NoteBook-server/blob/6762fc7/src/collections/notebooks/notebook-controller.ts#L4">src/collections/notebooks/notebook-controller.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="postnotebook" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> post<wbr>Notebook</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">post<wbr>Notebook<span class="tsd-signature-symbol">(</span>notebook<span class="tsd-signature-symbol">: </span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/NawafSwe/NoteBook-server/blob/6762fc7/src/collections/notebooks/notebook-controller.ts#L12">src/collections/notebooks/notebook-controller.ts:12</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>notebook: <a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="putnotebookbyid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> put<wbr>Notebook<wbr>ById</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">put<wbr>Notebook<wbr>ById<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, notebook<span class="tsd-signature-symbol">: </span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/NawafSwe/NoteBook-server/blob/6762fc7/src/collections/notebooks/notebook-controller.ts#L39">src/collections/notebooks/notebook-controller.ts:39</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>notebook: <a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_collections_notebooks_models_notebook_interface_.notebookinterface.html" class="tsd-signature-type">NotebookInterface</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -174,11 +254,20 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported">
-						<a href="_collections_notebooks_notebook_controller_.html#notebook" class="tsd-kind-icon">Notebook</a>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_collections_notebooks_notebook_controller_.html#deletenotebookbyid" class="tsd-kind-icon">delete<wbr>Notebook<wbr>ById</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_collections_notebooks_notebook_controller_.html#getnotebookbyid" class="tsd-kind-icon">get<wbr>Notebook<wbr>ById</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_collections_notebooks_notebook_controller_.html#getnotebooks" class="tsd-kind-icon">get<wbr>Notebooks</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_collections_notebooks_notebook_controller_.html#postnotebook" class="tsd-kind-icon">post<wbr>Notebook</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_collections_notebooks_notebook_controller_.html#putnotebookbyid" class="tsd-kind-icon">put<wbr>Notebook<wbr>ById</a>
 					</li>
 				</ul>
 			</nav>
