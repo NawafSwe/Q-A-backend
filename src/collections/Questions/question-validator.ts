@@ -1,6 +1,36 @@
+/**
+ * this module question-validator requires the following modules
+ * @requires {body,param}
+ * @requires {validateSchema}
+ */
+
+/**
+ * @type {body}
+ * @namespace body
+ * @description body of the request
+ */
+
+/**
+ * @type {param}
+ * @namespace param
+ * @description param of the request
+ */
 import {body, param} from 'express-validator';
+/**
+ * @type (function(schemas:string[], request:Request):boolean)
+ * @namespace validateSchema
+ * @description function to validate request schemas before process
+ */
 import {validateSchema} from '../../utils/validate-schema';
 
+/**
+ * @author Nawaf Alsharqi
+ * @function
+ * @name validate
+ * @param {string} method holds the name of the end point to check with it
+ * @returns VoidFunction
+ * @description validation function to validate request body
+ */
 export const validate: (method: string) => void = (method) => {
     switch (method) {
         case 'getQuestions': {
