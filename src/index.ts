@@ -5,6 +5,8 @@ import bodyParser = require('body-parser');
 import cors = require('cors');
 import helmet = require('helmet');
 import {connect} from "./configurations/mongo-connection";
+import {questionRoute} from './collections/questions/question-route';
+import {notebookRoute} from "./collections/notebooks/notebook-route";
 
 
 /* ------------ Choosing Env ------------ */
@@ -33,9 +35,9 @@ app.use(express.static("docs"));
 app.get('/', async (req: Request, res: Response) => {
     res.send('Backend health is good').status(200);
 });
-/* ------------ importing Routes ------------ */
-import {questionRoute} from './collections/questions/question-route';
+/* ------------ Using Routes ------------ */
 app.use('/questions', questionRoute);
+app.use('/notebooks', notebookRoute);
 
 app.listen(PORT);
 console.log(`server running on  http://${HOST}:${PORT}`);

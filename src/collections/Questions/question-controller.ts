@@ -1,7 +1,7 @@
 import {QuestionModel} from "./models/question-model";
 import {QuestionInterface} from "./models/question-interface";
 
-export const getQuestions: () => Promise<QuestionInterface[] | undefined> | never = async () => {
+export const getQuestions: () => Promise<QuestionInterface[] | undefined | null> | never = async () => {
     try {
         const response: QuestionInterface[] = await QuestionModel.find({});
         return response;
@@ -10,7 +10,17 @@ export const getQuestions: () => Promise<QuestionInterface[] | undefined> | neve
     }
 };
 
-export const postQuestion: (question: QuestionInterface) => Promise<QuestionInterface | undefined> | never = async (question) => {
+export const getQuestionById: (id: string) => Promise<QuestionInterface | undefined | null> = async (id) => {
+    try {
+        const response: QuestionInterface | undefined | null = await QuestionModel.findById(id);
+        return response;
+    } catch (error: any) {
+        console.log(`error occurred in getQuestionById error: ${error}`)
+    }
+}
+
+
+export const postQuestion: (question: QuestionInterface) => Promise<QuestionInterface | undefined | null> | never = async (question) => {
     try {
         const response: QuestionInterface = await QuestionModel.create(question);
         return response;
