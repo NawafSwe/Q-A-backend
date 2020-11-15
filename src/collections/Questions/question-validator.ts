@@ -98,7 +98,7 @@ export const validate: (method: string) => void = (method) => {
             return [
                 /* ------------------- Schema Validation ------------------- */
                 body(' ').custom((value, {req}) => {
-                    const schemas: string[] = [];
+                    const schemas: string[] = ['status', 'type', 'courseId', 'question', 'answer'];
                     if (validateSchema(schemas, req.body)) {
                         return true;
                     }
@@ -143,5 +143,4 @@ export const validate: (method: string) => void = (method) => {
 
     }
 }
-
 
