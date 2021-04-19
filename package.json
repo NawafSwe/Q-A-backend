@@ -16,11 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/NawafSwe/NoteBook-server.git"
   },
-  "keywords": [
-    "Axenda",
-    "Note-book",
-    "planner"
-  ],
+  "keywords": ["typescript","nodejs" ],
   "author": "Nawaf Alsharqi",
   "license": "ISC",
   "bugs": {
