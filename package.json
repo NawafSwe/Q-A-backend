@@ -1,5 +1,5 @@
 {
-  "name": "notebook-server",
+  "name": "Q&A-backend",
   "version": "1.0.0",
   "description": "package that holds all dependencies for the project",
   "main": "dist/index.js",
